@@ -25,7 +25,6 @@
 </head>
 
 <body>
-  <script src="script.js"></script>
     <!--El container es el contenedor principal, en el irán todas las filas y columnas-->
     <!--Con el container podermos centrar nuestra página-->
 
@@ -49,6 +48,7 @@
     
 
   <!--INICIO NAVBAR-->
+  
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark "> <!--sacamos lo siguiente: bg-body-tertiary-->
       <div class="container-fluid"> 
@@ -65,19 +65,23 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav m-auto mb-2 mb-lg-0"> <!--FLEXBOX --Cambié ESTO: me-auto mb-2 mb-lg-0-->
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Acerca de</a>
+              <a class="nav-link active" aria-current="page" href="#" id="">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Productos</a>
+              <a class="nav-link active" aria-current="page" href="#" id="btn-acerca-de">Acerca de</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" id="btn-productos" href="#">Productos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Precios</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
-            </li>
+      
             <li class="nav-item">
               <a class="nav-link" href="#">Ventas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#" id="btn-contacto">Contacto</a>
             </li>
             
             <li class="nav-item dropdown">
@@ -93,7 +97,7 @@
                   <li><a class="dropdown-item" href="#">Promociones</a></li>
                   <li><a class="dropdown-item" href="#">Novedades</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Sobre Nosotros</a></li>
+                  <li><a class="dropdown-item" href="#">Reclamos</a></li>
                 </ul>
               </li>
               
@@ -113,14 +117,13 @@
   <!--FINAL NAVBAR-->
 
   <!--CAROUSEL-->
-    <div class="contenedor-collapse">
+    <div class="contenedor">
       <div class="row">
         <div class="col">
           <div class="carousel slide carousel-fade" id="mi-carousel"  data-bs-ride="carousel"><!--data-bs-touch  No pueden mover-->
             <div class="carousel-inner">
               <div class="carousel-item active" data-bs-interval="3000">
                 <div class="carousel-caption">
-                  
                 
                   <h5> Accesorios | Repuestos | Tecnología </h5>
                       
@@ -200,16 +203,16 @@
   <!--FIN DE CAROUSEL-->
 
   <!--HERO-->
-  <div class="hero d-flex align-items-center justify-content-evenly">
-    <section>
+  <div class="hero d-flex align-items-center justify-content-center">
+    <section class="acerca-de" id="acerca-de">
       <h1>Tienda de Celulares</h1>
       <h4>Acá encontrarás todas las Marcas y Modelos para tu comodidad en el mundo de la Tecnología Celular</h4>
       <button type="button" class="btn btn-primary">Get Start</button>
       
     </section>
     <article>
-    <div class="">
-      <img src="img/phone_01.png" width="500" alt="" >
+    <div class="foto">
+      <img src="img/phone_01.png" width="500" class="foto" alt="" >
     </div>
   </article>
   </div>
@@ -218,7 +221,7 @@
   <!--ARTICLE-->
   <div class="row py-7">
       <div class="col border-bottom mb-4">
-        <div>
+        <div class="article-cel" id="productos">
           <h2 class="article text-center">Selecciona tu Modelo</h2>
         </div>
       </div>
@@ -368,7 +371,7 @@
     <div class="row mt-3 ">
       <div class="col-12 d-flex justify-content-center">
       <div class="col-8 col-md-6 col-sm-12 mb-5">
-        <form action="" >
+        <form action="" id="contacto" class="form">
           <label for="nombre" class="form-label">Nombre</label>
           <input type="text" class="form-control" placeholder="Escribe Aquí" id="nombre">
 
@@ -402,7 +405,6 @@
         <a href="#" class="btn btn-link">Subir</a>
       </div>
     </div>
-    
   </footer>
   <!--FIN DE FOOTER-->
 
@@ -414,7 +416,8 @@
 
   </div> <!--Fin de Container-->
     
-
+  <script src="dist/js/jquery-3.6.4.min.js"></script>
   <script src="dist/js/bootstrap.bundle.min.js"></script>
+  <script src="efectos.js"></script>
 </body>
 </html>
